@@ -1,6 +1,6 @@
 public class ArrayStack {
     private char[] arr;
-    int size;
+    private int size;
     public ArrayStack(int capacity)
     {
         arr=new char[capacity];
@@ -20,5 +20,21 @@ public class ArrayStack {
     {
         char retval=arr[--size];
         return retval;
+    }
+    public char peek()
+    {
+        return arr[size-1];
+    }
+    public boolean isEmpty()
+    {
+        return size==0;
+    }
+    public void print()
+    {
+        int index;
+        for(index=size-1;index>=0;index--)
+        {
+            System.out.println(stack[index]);
+        }
     }
 }
